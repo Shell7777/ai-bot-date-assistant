@@ -1,0 +1,50 @@
+# --- Entornos Virtuales ---
+# Ya veo que tienes carpetas 'venv' en tu raíz y dentro de src
+venv/
+src/venv/
+.env
+.venv
+env/
+ENV/
+
+# --- Python / Compilación ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Variables de Entorno y Secretos ---
+# ¡CRUCIAL! Aquí guardarás tu GEMINI_API_KEY y credenciales de AWS
+.env
+.env.*
+.venv
+env.bak
+*.secret
+
+# --- IDEs y Editores ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Bases de Datos Locales ---
+# Si tu DynamoDB local genera archivos de datos, ignóralos
+*.db
+*.sqlite3
