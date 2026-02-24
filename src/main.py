@@ -8,4 +8,4 @@ app.include_router(api_router)
 
 @app.get("/")
 def health_check():
-    return {"status": "ok", "version": "1.0.0"}
+    return {"status": "ok", "version": "1.0.0"} 

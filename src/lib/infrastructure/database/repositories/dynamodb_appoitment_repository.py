@@ -1,7 +1,7 @@
 from src.lib.infrastructure.database.dynamo_client import get_dynamodb
 from src.lib.domain.entities.appointment import Appointment
 
-class DynamoAppointmentRepository:
+class DynamoAppointmentRepository():
 
     def __init__(self):
         self.table = get_dynamodb().Table("appointments")
