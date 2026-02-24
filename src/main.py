@@ -1,9 +1,10 @@
 from fastapi import FastAPI
-from src.lib.infrastructure.api.routes.appointment_routes import router as appointment_router
 
-app = FastAPI(title="BarberShop AI")
+from src.lib.infrastructure.api.routes.routes import api_router
 
-app.include_router(appointment_router)
+app = FastAPI(title="Automate AI")
+
+app.include_router(api_router)
 
 @app.get("/")
 def health_check():
