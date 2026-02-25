@@ -1,0 +1,9 @@
+POST http://127.0.0.1:8000/api/v1/webhook
+Content-Type: application/json
+
+{
+    "phone": "987654321",
+    "message": "Traeme un json con 4 pokemons altura y un caracteristica ",
+    "business_id": "1",
+    "timestamp": "2024-01-01T08:00:00"
+}

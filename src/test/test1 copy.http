@@ -1,0 +1,9 @@
+POST http://127.0.0.1:8000/api/v1/appointments
+Content-Type: application/json
+
+{
+    "business_id": "1",
+    "client_name": "Jhon Falcon",
+    "service_name": "Rutina personalizada",
+    "start_time": "2024-01-01T08:00:00"
+}

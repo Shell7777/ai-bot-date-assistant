@@ -9,7 +9,7 @@ dynamodb = boto3.client(
 )
 try:
     dynamodb.create_table(
-        TableName="appointments",
+        TableName="ChatMessages",
         KeySchema=[
             {"AttributeName": "PK", "KeyType": "HASH"},
             {"AttributeName": "SK", "KeyType": "RANGE"}
@@ -20,5 +20,19 @@ try:
         ],
         BillingMode="PAY_PER_REQUEST"
     )
+    
+    dynamodb.create_table(
+        TableName="dev-MainTable",
+        KeySchema=[
+            {"AttributeName": "PK", "KeyType": "HASH"},
+            {"AttributeName": "SK", "KeyType": "RANGE"}
+        ],
+        AttributeDefinitions=[
+            {"AttributeName": "PK", "AttributeType": "S"},
+            {"AttributeName": "SK", "AttributeType": "S"}
+        ],
+        BillingMode="PAY_PER_REQUEST"
+    )
+    
 except dynamodb.exceptions.ResourceInUseException:
     print("La tabla ya existe, saltando creación... ✅")
